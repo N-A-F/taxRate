@@ -1,0 +1,25 @@
+{
+  "country": [
+    { "name": "argentina", "taxRate": 0.21 },
+    { "name": "australia", "taxRate": 0.1 },
+    { "name": "brazil", "taxRate": 0.17 },
+    { "name": "canada", "taxRate": 0.21 },
+    { "name": "china", "taxRate": 0.13 },
+    { "name": "france", "taxRate": 0.2 },
+    { "name": "germany", "taxRate": 0.19 },
+    { "name": "india", "taxRate": 0.18 },
+    { "name": "italy", "taxRate": 0.22 },
+    { "name": "japan", "taxRate": 0.1 },
+    { "name": "mexico", "taxRate": 0.16 },
+    { "name": "netherlands", "taxRate": 0.21 },
+    { "name": "russia", "taxRate": 0.2 },
+    { "name": "saudi arabia", "taxRate": 0.15 },
+    { "name": "singapore", "taxRate": 0.07 },
+    { "name": "south africa", "taxRate": 0.15 },
+    { "name": "south korea", "taxRate": 0.1 },
+    { "name": "spain", "taxRate": 0.21 },
+    { "name": "switzerland", "taxRate": 0.077 },
+    { "name": "turkey", "taxRate": 0.18 },
+    { "name": "united kingdom", "taxRate": 0.2 }
+  ]
+}
