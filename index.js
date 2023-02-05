@@ -5,7 +5,6 @@ let taxes;
 fs.readFile("taxes.json", (err, data) => {
   if (err) throw err;
   taxes = JSON.parse(data);
-  console.log(taxes);
 });
 
 app.listen(PORT, () => {
