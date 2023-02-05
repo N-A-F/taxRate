@@ -8,19 +8,21 @@ fs.readFile("taxes.json", (err, data) => {
   console.log(taxes);
 });
 
-app.listen(PORT, () => console.log("working on port " + PORT));
-
-app.get("/tax", (req, res) => {
-  res.status(200).send({
-    taxRate: 0.15,
-  });
+app.listen(PORT, () => {
+  console.log("working on http://localhost:" + PORT);
+});
+app.get("/", (req, res) => {
+  res.status(200).send({ message: "API server working" });
 });
 
 app.get("/tax/:country", (req, res) => {
-  const x = req.params;
-  const country = x.country;
-  const list = taxes.country;
-  let obj = list.find((c) => c.name === country);
-  let rate = obj.taxRate;
+  const country = req.params.country;
+  const countryList = taxes.country;
+  let cName = countryList.find((c) => c.name === country);
+  let rate = cName.taxRate;
   res.status(200).send({ taxRate: rate });
+});
+
+app.get("/tax", (req, res) => {
+  res.status(200).send(taxes.country);
 });
