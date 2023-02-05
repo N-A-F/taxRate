@@ -18,8 +18,12 @@ app.get("/tax/:country", (req, res) => {
   const country = req.params.country;
   const countryList = taxes.country;
   let cName = countryList.find((c) => c.name === country);
-  let rate = cName.taxRate;
-  res.status(200).send({ taxRate: rate });
+  if (cName) {
+    const rate = cName.taxRate;
+    res.status(200).send({ taxRate: rate });
+  } else {
+    res.status(404).send({ message: "Not Found" });
+  }
 });
 
 app.get("/tax", (req, res) => {
